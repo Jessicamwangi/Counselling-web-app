@@ -94,7 +94,7 @@ a{
     margin-top: 3em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    grid-gap: 40px;
     // width: 723px;
     height: 100px;
     // left: 25px;
@@ -121,11 +121,95 @@ a{
     font-family: sans-serif;
 }
 .container-grid p {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 .container {
     padding-inline: 5vw;
 
+}
+.testimonials {
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+    padding: 2%;
+}
+.testimonials h1{
+    // font-weight: 500;
+    font-size: 2.5em;
+    // font-weight: bold;
+}
+
+.text {
+    font-family: 'Josefin Slab', serif;
+    font-size: 2em;
+    margin-top: .5em;
+}
+.testimonial-box-container{
+    display: grid;
+    justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.testimonial-box {
+    width: 500px;
+    box-shadow: 2px 2px 30 px rgba(0,0,0,0.1);
+    background-color: var(--background-color);
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+
+}
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile {
+    display: flex;
+    align-items: center;
+
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong{
+    color: #050505;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+}
+.name-user span{
+    color: #474343;
+    font-size: .8em;
+}
+.reviews{
+    color: #f9d71c;
+}
+.client-comment p {
+    font-size: 0.9em;
+    color: #272424;
+
+}
+.testimonial-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 body{
     font-size: var(--font-size);
@@ -141,5 +225,27 @@ body{
             display: block;
         }   
     }
+    .testimonial-box{
+        width: 100%;
+    }
+    .testimonial-heading{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:1060px) {
+    .testimonial-box{
+        width: 45%;
+        padding: 10px;
+        
+    }
     
+}
+@media (max-width:340px) {
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-top: 10px;
+    }
 }
